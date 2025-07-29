@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --smartfit-yellow: #FFD700;
+            --smartfit-orange: #FF8C00;
+            --smartfit-blue: #0672f3;
+            --smartfit-blue-light: #83bdfc;
+            --smartfit-blue-dark: #064499;
+            --smartfit-black: #1A1A1A;
+            --smartfit-gray: #6B7280;
+            --smartfit-gray-light: #F3F4F6;
+            --smartfit-white: #FFFFFF;
+        }
+        
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            overflow-x: hidden;
+        }
+        
+        .smartfit-gradient { 
+            background: linear-gradient(135deg, var(--smartfit-blue) 0%, var(--smartfit-blue-dark) 100%); 
+        }
+        
+        .smartfit-dark-gradient { 
+            background: linear-gradient(135deg, var(--smartfit-black) 0%, var(--smartfit-gray) 100%); 
+        }
+        
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% { transform: translateY(0); }
+            40%, 43% { transform: translateY(-10px); }
+            70% { transform: translateY(-5px); }
+        }
+        
+        .animate-fadeInUp { animation: fadeInUp 0.8s ease-out; }
+        .animate-fadeInLeft { animation: fadeInLeft 0.8s ease-out; }
+        .animate-fadeInRight { animation: fadeInRight 0.8s ease-out; }
+        .animate-pulse-custom { animation: pulse 2s infinite; }
+        .animate-bounce-custom { animation: bounce 2s infinite; }
+        
+        .card-hover { 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .card-hover:hover { 
+            transform: translateY(-10px) scale(1.02); 
+            box-shadow: 0 25px 50px rgba(6, 114, 243, 0.2); 
+        }
+        
+        .btn-smartfit {
+            background: linear-gradient(45deg, var(--smartfit-yellow), var(--smartfit-orange));
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-smartfit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+        }
+        
+        .btn-smartfit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-smartfit:hover::before {
+            left: 100%;
+        }
+        
+        /* Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .chatbot-button {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, var(--smartfit-yellow), var(--smartfit-orange));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .chatbot-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6);
+        }
+        
+        .chatbot-window {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            width: 320px;
+            height: 400px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .chatbot-header {
+            background: var(--smartfit-blue);
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+        }
+        
+        .chatbot-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .message {
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 15px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .message.bot {
+            background: #f0f0f0;
+            align-self: flex-start;
+        }
+        
+        .message.user {
+            background: var(--smartfit-blue);
+            color: white;
+            align-self: flex-end;
+        }
+        
+        .chatbot-options {
+            padding: 10px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .option-btn {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+        }
+        
+        .option-btn:hover {
+            background: var(--smartfit-yellow);
+            color: var(--smartfit-black);
+        }
+        
+        /* Scroll animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
