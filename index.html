@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Macías - Entrenador Personal Smart Fit</title>
+    <!-- Tailwind CSS CDN for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- External stylesheet with all custom variables and classes -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <!--
+        The header originally used a blue gradient defined by the
+        ``smartfit-gradient`` class.  Per the user's request, the background
+        behind “Luis Macías” has been updated to a dark gradient (black to
+        grey) by switching the class to ``smartfit-dark-gradient``.  All
+        other content remains the same.
+    -->
+    <header class="smartfit-dark-gradient text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="animate-fadeInUp">
+                <div class="w-40 h-40 bg-white rounded-full mx-auto flex items-center justify-center mb-6 animate-pulse-custom">
+                    <span class="text-8xl">💪</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tight">LUIS MACÍAS</h1>
+                <p class="text-2xl opacity-90 mb-6">Instructor Especializado en Fitness Integral</p>
+                <div class="flex items-center justify-center">
+                    <div class="px-8 py-3 rounded-full font-bold text-xl shadow-lg animate-bounce-custom" style="background: var(--smartfit-yellow); color: var(--smartfit-black);">
+                        <span class="mr-2">🏋️</span>SMART FIT
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative elements -->
+        <div class="absolute top-10 left-10 w-20 h-20 bg-white opacity-10 rounded-full animate-pulse"></div>
+        <div class="absolute bottom-10 right-10 w-32 h-32 bg-white opacity-5 rounded-full animate-pulse"></div>
+    </header>
+
+    <!-- Promociones Especiales -->
+    <section class="py-20 relative overflow-hidden" style="background: linear-gradient(135deg, var(--smartfit-yellow) 0%, var(--smartfit-orange) 100%);">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 scroll-animate">
+                <div class="inline-block bg-red-600 text-white px-6 py-2 rounded-full font-bold text-sm mb-4 animate-pulse">
+                    🔥 OFERTA POR TIEMPO LIMITADO
+                </div>
+                <h2 class="text-5xl font-bold mb-4 text-white">¡PROMOCIONES ESPECIALES!</h2>
+                <p class="text-xl text-white opacity-90">Aprovecha estos precios únicos - Solo hasta fin de mes</p>
+                <div class="w-24 h-1 mx-auto bg-white mt-6"></div>
+            </div>
+            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+                <!-- Promoción Básica -->
+                <div class="bg-white rounded-3xl p-8 shadow-2xl card-hover scroll-animate relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold">POPULAR</span>
+                    </div>
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-2" style="color: var(--smartfit-black)">PRUEBA SEMANAL</h3>
+                        <p class="text-lg" style="color: var(--smartfit-blue)">1 Persona • 1 Semana</p>
+                        <div class="mt-6">
+                            <span class="text-lg line-through" style="color: var(--smartfit-gray)">$800</span>
+                            <span class="text-4xl font-bold ml-2" style="color: var(--smartfit-blue)">$600</span>
+                            <p class="text-sm font-bold text-green-600 mt-2">¡AHORRA $200!</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span>5 sesiones de 1 hora</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span>Evaluación física gratuita</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span>Plan de ejercicios personalizado</span>
+                        </li>
+                    </ul>
+                    <!--
+                        Al hacer clic en "¡QUIERO ESTA OFERTA!" se abrirá una conversación de
+                        WhatsApp con Luis al número proporcionado por el usuario.  El prefijo
+                        ``+52`` corresponde a México.  ``openWhatsApp()`` está definido en
+                        script.js.
+                    -->
+                    <a
+                        href="https://wa.me/523329512916?text=%C2%A1Hola%20Luis!%20Me%20interesa%20tu%20promoci%C3%B3n%20de%20prueba%20semanal"
+                        target="_blank"
+                        class="btn-smartfit w-full py-4 rounded-full font-bold text-lg text-white flex items-center justify-center"
+                        >
+                        ¡QUIERO ESTA OFERTA!
+                    </a>
+                </div>
+                <!-- Promoción Premium -->
+                <div class="bg-white rounded-3xl p-8 shadow-2xl card-hover scroll-animate relative border-4" style="border-color: var(--smartfit-yellow);">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="px-4 py-2 rounded-full text-sm font-bold text-black" style="background: var(--smartfit-yellow)">MEJOR VALOR</span>
+                    </div>
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-2" style="color: var(--smartfit-black)">TRANSFORMACIÓN TOTAL</h3>
+                        <p class="text-lg" style="color: var(--smartfit-blue)">1 Persona • 4 Semanas</p>
+                        <div class="mt-6">
+                            <span class="text-lg line-through" style="color: var(--smartfit-gray)">$2,800</span>
+                            <span class="text-4xl font-bold ml-2" style="color: var(--smartfit-blue)">$2,000</span>
+                            <p class="text-sm font-bold text-green-600 mt-2">¡AHORRA $800!</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span>20 sesiones de entrenamiento</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span>Plan nutricional básico GRATIS</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span>Seguimiento semanal</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span>Asesoría WhatsApp incluida</span>
+                        </li>
+                    </ul>
+                    <button class="btn-smartfit w-full py-4 rounded-full font-bold text-lg text-white">
+                        ¡APROVECHA AHORA!
+                    </button>
+                </div>
+                <!-- Promoción Pareja -->
+                <div class="bg-white rounded-3xl p-8 shadow-2xl card-hover scroll-animate relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold">PAREJAS</span>
+                    </div>
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-2" style="color: var(--smartfit-black)">ENTRENA EN PAREJA</h3>
+                        <p class="text-lg" style="color: var(--smartfit-blue)">2 Personas • 4 Semanas</p>
+                        <div class="mt-6">
+                            <span class="text-lg line-through" style="color: var(--smartfit-gray)">$4,000</span>
+                            <span class="text-4xl font-bold ml-2" style="color: var(--smartfit-blue)">$3,000</span>
+                            <p class="text-sm font-bold text-green-600 mt-2">¡AHORRA $1,000!</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span>20 sesiones para ambos</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span>Motivación mutua</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span>Rutinas complementarias</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-green-500 mr-3">✓</span>
+                            <span>Precio por persona: $1,500</span>
+                        </li>
+                    </ul>
+                    <button class="btn-smartfit w-full py-4 rounded-full font-bold text-lg text-white">
+                        ¡ENTRENA JUNTOS!
+                    </button>
+                </div>
+            </div>
+            <!-- Contador de urgencia -->
+            <div class="text-center mt-16 scroll-animate">
+                <div class="bg-red-600 text-white rounded-2xl p-6 max-w-md mx-auto">
+                    <h3 class="text-xl font-bold mb-2">⏰ OFERTA TERMINA EN:</h3>
+                    <div class="flex justify-center space-x-4 text-2xl font-bold">
+                        <div class="text-center">
+                            <div id="days">15</div>
+                            <div class="text-sm">DÍAS</div>
+                        </div>
+                        <div class="text-center">
+                            <div id="hours">23</div>
+                            <div class="text-sm">HORAS</div>
+                        </div>
+                        <div class="text-center">
+                            <div id="minutes">45</div>
+                            <div class="text-sm">MIN</div>
+                        </div>
+                    </div>
+                    <p class="text-sm mt-4 opacity-90">*Solo quedan 8 cupos disponibles este mes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios y Precios -->
+    <section class="py-20 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-4xl font-bold mb-4" style="color: var(--smartfit-black)">Precios Regulares</h2>
+                <p class="text-lg" style="color: var(--smartfit-gray)">Después de las promociones, estos son nuestros precios estándar</p>
+                <div class="w-24 h-1 mx-auto" style="background: var(--smartfit-yellow)"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <!-- 1 Persona -->
+                <div class="card-hover bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 scroll-animate">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 rounded-full mx-auto flex items-center justify-center mb-6 animate-pulse-custom" style="background: var(--smartfit-blue)">
+                            <span class="text-3xl text-white">👤</span>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-2" style="color: var(--smartfit-black)">1 PERSONA</h3>
+                        <p class="font-medium" style="color: var(--smartfit-blue)">ENTRENAMIENTO PERSONALIZADO</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="rounded-2xl p-6 flex justify-between items-center transition-colors" style="background: var(--smartfit-gray-light);" onmouseover="this.style.background='#FFF9C4'" onmouseout="this.style.background='var(--smartfit-gray-light)'">
+                            <span class="font-bold text-lg" style="color: var(--smartfit-gray)">1 SEMANA</span>
+                            <span class="text-3xl font-bold" style="color: var(--smartfit-blue)">$600</span>
+                        </div>
+                        <div class="rounded-2xl p-6 flex justify-between items-center transition-colors" style="background: var(--smartfit-gray-light);" onmouseover="this.style.background='#FFF9C4'" onmouseout="this.style.background='var(--smartfit-gray-light)'">
+                            <span class="font-bold text-lg" style="color: var(--smartfit-gray)">4 SEMANAS</span>
+                            <span class="text-3xl font-bold" style="color: var(--smartfit-blue)">$2,000</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 Personas -->
+                <div class="card-hover bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 scroll-animate">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 rounded-full mx-auto flex items-center justify-center mb-6 animate-pulse-custom" style="background: var(--smartfit-blue-dark)">
+                            <span class="text-3xl text-white">👥</span>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-2" style="color: var(--smartfit-black)">2 PERSONAS</h3>
+                        <p class="font-medium" style="color: var(--smartfit-blue-dark)">ENTRENAMIENTO EN PAREJA</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="rounded-2xl p-6 flex justify-between items-center transition-colors" style="background: var(--smartfit-gray-light);" onmouseover="this.style.background='#FFF9C4'" onmouseout="this.style.background='var(--smartfit-gray-light)'">
+                            <span class="font-bold text-lg" style="color: var(--smartfit-gray)">1 SEMANA</span>
+                            <span class="text-3xl font-bold" style="color: var(--smartfit-blue-dark)">$900</span>
+                        </div>
+                        <div class="rounded-2xl p-6 flex justify-between items-center transition-colors" style="background: var(--smartfit-gray-light);" onmouseover="this.style.background='#FFF9C4'" onmouseout="this.style.background='var(--smartfit-gray-light)'">
+                            <span class="font-bold text-lg" style="color: var(--smartfit-gray)">4 SEMANAS</span>
+                            <span class="text-3xl font-bold" style="color: var(--smartfit-blue-dark)">$3,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qué Incluye -->
+    <section class="py-20" style="background: var(--smartfit-light-gray)">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-4xl font-bold mb-4" style="color: var(--smartfit-black)">¿Qué Incluye?</h2>
+                <div class="w-24 h-1 mx-auto" style="background: var(--smartfit-yellow)"></div>
+            </div>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover text-center scroll-animate">
+                        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background: var(--smartfit-yellow)">
+                            <span class="text-2xl" style="color: var(--smartfit-black)">⏰</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4" style="color: var(--smartfit-black)">Horario Flexible</h3>
+                        <p style="color: var(--smartfit-gray)">1 hora diaria, 5 días por semana (Lunes a Viernes)</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover text-center scroll-animate">
+                        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background: var(--smartfit-blue)">
+                            <span class="text-white text-2xl">🎯</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4" style="color: var(--smartfit-black)">Programa Personalizado</h3>
+                        <p style="color: var(--smartfit-gray)">Diseñado específicamente para tu objetivo</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover text-center scroll-animate">
+                        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background: var(--smartfit-orange)">
+                            <span class="text-white text-2xl">📚</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4" style="color: var(--smartfit-black)">Explicación Detallada</h3>
+                        <p style="color: var(--smartfit-gray)">Aprende la técnica correcta de cada ejercicio</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover text-center scroll-animate">
+                        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background: var(--smartfit-blue-dark)">
+                            <span class="text-white text-2xl">✅</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4" style="color: var(--smartfit-black)">Corrección de Técnica</h3>
+                        <p style="color: var(--smartfit-gray)">Supervisión constante para mejores resultados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Otros Servicios -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-4xl font-bold mb-4" style="color: var(--smartfit-dark)">Servicios Adicionales</h2>
+                <div class="w-24 h-1 mx-auto" style="background: var(--smartfit-red)"></div>
+            </div>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="bg-gradient-to-r from-green-50 to-emerald-100 rounded-3xl p-8 border-2 border-green-200 card-hover scroll-animate">
+                    <div class="flex items-center">
+                        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mr-6">
+                            <span class="text-white text-2xl">🥗</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-green-800 mb-2">Plan Nutricional</h3>
+                            <p class="text-green-700 text-lg">Diseño de plan alimenticio personalizado para maximizar tus resultados</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-r from-yellow-50 to-amber-100 rounded-3xl p-8 border-2 border-yellow-200 card-hover scroll-animate">
+                    <div class="flex items-center">
+                        <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mr-6">
+                            <span class="text-white text-2xl">💊</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-yellow-800 mb-2">Suplementación Deportiva</h3>
+                            <p class="text-yellow-700 text-lg">Asesoría especializada en suplementos para optimizar tu rendimiento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificaciones -->
+    <section class="py-20 smartfit-dark-gradient text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-4xl font-bold mb-4">Certificaciones y Especialidades</h2>
+                <div class="w-24 h-1 mx-auto" style="background: var(--smartfit-red)"></div>
+            </div>
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm card-hover scroll-animate">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-4">🏆</span>
+                        <h3 class="font-bold text-lg">Entrenamiento Especializado para Mujeres</h3>
+                    </div>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm card-hover scroll-animate">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-4">🥗</span>
+                        <h3 class="font-bold text-lg">Asesor en Nutrición Deportiva</h3>
+                    </div>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm card-hover scroll-animate">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-4">💪</span>
+                        <h3 class="font-bold text-lg">Diploma de Fisicoconstructivismo</h3>
+                    </div>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm card-hover scroll-animate">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-4">🎯</span>
+                        <h3 class="font-bold text-lg">Instructor en Fitness Integral</h3>
+                    </div>
+                </div>
+                <div class="bg-white bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm card-hover scroll-animate md:col-span-2 lg:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-4">💊</span>
+                        <h3 class="font-bold text-lg">Certificación en Asesor en Suplementación</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="py-20 smartfit-gradient text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="scroll-animate">
+                <h2 class="text-4xl font-bold mb-12">¡Contáctame para Más Información!</h2>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-white bg-opacity-20 rounded-3xl p-8 backdrop-blur-sm card-hover">
+                        <span class="text-4xl block mb-4">📱</span>
+                        <h3 class="font-bold text-xl mb-2">Teléfono</h3>
+                        <!-- Teléfono enlazado directamente al número de Luis -->
+                        <a href="tel:3329512916" class="text-xl hover:underline">332 951 2916</a>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-3xl p-8 backdrop-blur-sm card-hover">
+                        <span class="text-4xl block mb-4">📧</span>
+                        <h3 class="font-bold text-xl mb-2">Email</h3>
+                        <a href="mailto:ja6774356@gmail.com" class="text-xl hover:underline">ja6774356@gmail.com</a>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-3xl p-8 backdrop-blur-sm card-hover">
+                        <span class="text-4xl block mb-4">📍</span>
+                        <h3 class="font-bold text-xl mb-2">Ubicación</h3>
+                        <p class="text-xl">León Campestre</p>
+                    </div>
+                </div>
+                <div class="space-x-4">
+                    <!-- Botones de contacto rápido -->
+                    <button onclick="window.open('tel:3329512916')" class="btn-smartfit bg-white text-red-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all">
+                        📞 Llamar Ahora
+                    </button>
+                    <button onclick="window.open('mailto:ja6774356@gmail.com')" class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-red-600 transition-all">
+                        ✉️ Enviar Email
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="smartfit-dark-gradient text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-6">
+                <p class="text-2xl font-bold mb-2">LUIS MACÍAS - Entrenador Personal</p>
+                <p class="text-gray-400 text-lg">Smart Fit • León Campestre</p>
+            </div>
+            <div class="w-24 h-1 mx-auto mb-6" style="background: var(--smartfit-red)"></div>
+            <p class="text-gray-400 text-lg">Transforma tu cuerpo, transforma tu vida 💪</p>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="flex justify-between items-center">
+                    <span>💪 Asistente Smart Fit</span>
+                    <button onclick="toggleChatbot()" class="text-white hover:text-gray-200">✕</button>
+                </div>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot">
+                    ¡Hola! Soy el asistente de Luis Macías. ¿En qué puedo ayudarte hoy?
+                </div>
+            </div>
+            <div class="chatbot-options" id="chatbotOptions">
+                <button class="option-btn" onclick="askQuestion('precios')">💰 Ver precios</button>
+                <button class="option-btn" onclick="askQuestion('horarios')">⏰ Horarios disponibles</button>
+                <button class="option-btn" onclick="askQuestion('servicios')">🏋️ Qué incluye</button>
+                <button class="option-btn" onclick="askQuestion('contacto')">📞 Información de contacto</button>
+                <button class="option-btn" onclick="askQuestion('ubicacion')">📍 Ubicación</button>
+            </div>
+        </div>
+        <div class="chatbot-button animate-bounce-custom" onclick="toggleChatbot()">
+            <span class="text-white text-2xl">💬</span>
+        </div>
+    </div>
+
+    <!-- External JavaScript with interactive behaviour -->
+    <script src="script.js"></script>
+</body>
+</html>
