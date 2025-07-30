@@ -4,6 +4,8 @@
  * Este archivo agrupa todas las variables CSS y clases utilizadas en
  * ``index.html``.  Mover la hoja de estilos fuera del HTML mejora la
  * mantenibilidad y facilita futuras modificaciones.
+ *
+ * 💡 OPTIMIZADA PARA MULTIDISPOSITIVOS (mobile-first, responsiva).
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&display=swap');
@@ -22,11 +24,48 @@
     --smartfit-red: #dc2626;
     --smartfit-dark: var(--smartfit-black);
     --smartfit-light-gray: var(--smartfit-gray-light);
+
+    /* Responsive helpers */
+    --container-padding: 1rem;
+    --card-max-width: 400px;
+    --chatbot-width: 96vw;
+    --chatbot-height: 65vh;
+    --chatbot-bottom: 15px;
+    --chatbot-right: 10px;
+}
+
+@media (min-width: 480px) {
+    :root {
+        --chatbot-width: 340px;
+        --chatbot-height: 420px;
+        --chatbot-bottom: 20px;
+        --chatbot-right: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    :root {
+        --container-padding: 2rem;
+        --card-max-width: 500px;
+        --chatbot-width: 370px;
+        --chatbot-height: 470px;
+    }
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background: var(--smartfit-light-gray);
+    color: var(--smartfit-black);
+    min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 /* Gradientes personalizadas */
@@ -72,21 +111,36 @@ body {
 /* Tarjetas con efecto hover */
 .card-hover {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--smartfit-white);
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(6, 114, 243, 0.07);
+    max-width: var(--card-max-width);
+    margin: 0 auto var(--container-padding) auto;
+    padding: 1.25rem;
 }
-.card-hover:hover {
+.card-hover:hover, .card-hover:focus-visible {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 25px 50px rgba(6, 114, 243, 0.2);
+    box-shadow: 0 25px 50px rgba(6, 114, 243, 0.20);
 }
 
 /* Botón SmartFit */
 .btn-smartfit {
     background: linear-gradient(45deg, var(--smartfit-yellow), var(--smartfit-orange));
+    color: var(--smartfit-black);
+    font-weight: 600;
+    border: none;
+    border-radius: 100px;
+    padding: 0.7em 2.2em;
+    font-size: 1rem;
+    cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(255,215,0,0.1);
 }
-.btn-smartfit:hover {
-    transform: translateY(-2px);
+.btn-smartfit:hover, .btn-smartfit:focus-visible {
+    transform: translateY(-2px) scale(1.04);
     box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
 }
 .btn-smartfit::before {
@@ -98,21 +152,26 @@ body {
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
     transition: left 0.5s;
+    z-index: 1;
 }
-.btn-smartfit:hover::before {
+.btn-smartfit:hover::before, .btn-smartfit:focus-visible::before {
     left: 100%;
 }
 
 /* Chatbot Styles */
 .chatbot-container {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: var(--chatbot-bottom);
+    right: var(--chatbot-right);
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
+
 .chatbot-button {
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
     background: linear-gradient(45deg, var(--smartfit-yellow), var(--smartfit-orange));
     border-radius: 50%;
     display: flex;
@@ -121,44 +180,67 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
     transition: all 0.3s ease;
+    border: none;
+    outline: none;
 }
-.chatbot-button:hover {
+.chatbot-button:hover, .chatbot-button:focus-visible {
     transform: scale(1.1);
     box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6);
 }
+
 .chatbot-window {
     position: absolute;
-    bottom: 70px;
+    bottom: 65px;
     right: 0;
-    width: 320px;
-    height: 400px;
-    background: white;
+    width: var(--chatbot-width);
+    height: var(--chatbot-height);
+    background: var(--smartfit-white);
     border-radius: 15px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.18);
     display: none;
     flex-direction: column;
     overflow: hidden;
+    max-width: 98vw;
+    max-height: 85vh;
 }
+
 .chatbot-header {
     background: var(--smartfit-blue);
     color: white;
     padding: 15px;
     font-weight: 600;
+    font-size: 1.12rem;
+    text-align: center;
 }
+
 .chatbot-messages {
     flex: 1;
-    padding: 15px;
+    padding: 12px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background: var(--smartfit-gray-light);
+    scrollbar-width: thin;
+    scrollbar-color: var(--smartfit-blue-light) var(--smartfit-gray-light);
 }
+.chatbot-messages::-webkit-scrollbar {
+    width: 7px;
+    background: var(--smartfit-gray-light);
+}
+.chatbot-messages::-webkit-scrollbar-thumb {
+    background: var(--smartfit-blue-light);
+    border-radius: 6px;
+}
+
 .message {
-    max-width: 80%;
+    max-width: 81%;
     padding: 10px 15px;
     border-radius: 15px;
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 15px;
+    line-height: 1.5;
+    word-break: break-word;
+    margin-bottom: 4px;
 }
 .message.bot {
     background: #f0f0f0;
@@ -174,6 +256,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    background: var(--smartfit-white);
+    border-top: 1px solid var(--smartfit-gray-light);
 }
 .option-btn {
     background: #f8f9fa;
@@ -182,20 +266,72 @@ body {
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.2s;
-    font-size: 13px;
+    font-size: 14px;
 }
-.option-btn:hover {
+.option-btn:hover, .option-btn:focus-visible {
     background: var(--smartfit-yellow);
     color: var(--smartfit-black);
+    outline: none;
 }
 
 /* Scroll animations - initial hidden state */
 .scroll-animate {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.6s ease;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .scroll-animate.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Layout helpers */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+    .card-hover {
+        padding: 1rem;
+        font-size: 0.98rem;
+        max-width: 98vw;
+    }
+    .chatbot-header {
+        font-size: 1rem;
+        padding: 11px;
+    }
+    .chatbot-window {
+        min-width: 0;
+        min-height: 0;
+        width: 98vw;
+        height: 60vh;
+        right: 0;
+        left: unset;
+        border-radius: 10px;
+    }
+    .container {
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .chatbot-window {
+        height: 55vh;
+    }
+    .chatbot-header {
+        font-size: 0.95rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
 }
