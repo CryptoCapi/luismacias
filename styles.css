@@ -1,13 +1,3 @@
-/*
- * Hoja de estilos personalizada para el sitio de Luis Macías.
- *
- * Este archivo agrupa todas las variables CSS y clases utilizadas en
- * ``index.html``.  Mover la hoja de estilos fuera del HTML mejora la
- * mantenibilidad y facilita futuras modificaciones.
- *
- * 💡 OPTIMIZADA PARA MULTIDISPOSITIVOS (mobile-first, responsiva).
- */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&display=swap');
 
 :root {
@@ -20,12 +10,9 @@
     --smartfit-gray: #6B7280;
     --smartfit-gray-light: #F3F4F6;
     --smartfit-white: #FFFFFF;
-    /* Variables adicionales utilizadas por la página pero no definidas en el original */
     --smartfit-red: #dc2626;
     --smartfit-dark: var(--smartfit-black);
     --smartfit-light-gray: var(--smartfit-gray-light);
-
-    /* Responsive helpers */
     --container-padding: 1rem;
     --card-max-width: 400px;
     --chatbot-width: 96vw;
@@ -42,7 +29,6 @@
         --chatbot-right: 20px;
     }
 }
-
 @media (min-width: 768px) {
     :root {
         --container-padding: 2rem;
@@ -68,17 +54,16 @@ body {
     box-sizing: border-box;
 }
 
-/* Gradientes personalizadas */
 .smartfit-gradient {
-    /* De amarillo a naranja; se utiliza en la sección de promociones y contacto */
     background: linear-gradient(135deg, var(--smartfit-yellow) 0%, var(--smartfit-orange) 100%);
+    width: 100vw;
     border-radius: 0 0 24px 24px;
     padding-bottom: 1.2em;
+    position: relative;
 }
-
 .smartfit-dark-gradient {
-    /* De negro a gris; utilizado en el encabezado y el pie de página */
     background: linear-gradient(135deg, var(--smartfit-black) 0%, var(--smartfit-gray) 100%);
+    width: 100vw;
 }
 
 /* Animaciones */
@@ -110,7 +95,6 @@ body {
 .animate-pulse-custom { animation: pulse 2s infinite; }
 .animate-bounce-custom { animation: bounce 2s infinite; }
 
-/* Tarjetas con efecto hover */
 .card-hover {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     background: var(--smartfit-white);
@@ -130,6 +114,30 @@ body {
 }
 .card-hover:last-child {
     margin-bottom: 2.5rem !important;
+}
+.smartfit-card-green {
+    background: linear-gradient(90deg, #e9ffe8, #e1f7e7);
+    border: 2px solid #86efac;
+}
+.smartfit-card-yellow {
+    background: linear-gradient(90deg, #fffde7, #fff9c4);
+    border: 2px solid #fef08a;
+}
+
+/* Contact card fix */
+.smartfit-contact-card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    box-shadow: 0 2px 10px rgba(6, 114, 243, 0.10);
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--smartfit-black);
+}
+.smartfit-contact-link,
+.smartfit-contact-card a,
+.smartfit-contact-card h3,
+.smartfit-contact-card p {
+    color: var(--smartfit-black) !important;
 }
 
 /* Botón SmartFit */
@@ -172,7 +180,6 @@ body {
     left: 100%;
 }
 
-/* Chatbot Styles */
 .chatbot-container {
     position: fixed;
     bottom: var(--chatbot-bottom);
@@ -181,8 +188,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    width: auto;
 }
-
 .chatbot-button {
     width: 56px;
     height: 56px;
@@ -196,12 +203,13 @@ body {
     transition: all 0.3s ease;
     border: none;
     outline: none;
+    position: relative;
+    z-index: 1001;
 }
 .chatbot-button:hover, .chatbot-button:focus-visible {
     transform: scale(1.1);
     box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6);
 }
-
 .chatbot-window {
     position: absolute;
     bottom: 65px;
@@ -216,8 +224,8 @@ body {
     overflow: hidden;
     max-width: 98vw;
     max-height: 85vh;
+    z-index: 1002;
 }
-
 .chatbot-header {
     background: var(--smartfit-blue);
     color: white;
@@ -226,7 +234,6 @@ body {
     font-size: 1.12rem;
     text-align: center;
 }
-
 .chatbot-messages {
     flex: 1;
     padding: 12px;
@@ -246,7 +253,6 @@ body {
     background: var(--smartfit-blue-light);
     border-radius: 6px;
 }
-
 .message {
     max-width: 81%;
     padding: 10px 15px;
@@ -298,7 +304,6 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
-
 /* Layout helpers */
 .container {
     width: 100%;
@@ -307,8 +312,6 @@ body {
     padding-left: var(--container-padding);
     padding-right: var(--container-padding);
 }
-
-/* Responsive Tweaks */
 @media (max-width: 600px) {
     body {
         padding: 0 0.5rem;
@@ -351,7 +354,6 @@ body {
         padding-right: 0.6rem;
     }
 }
-
 @media (max-width: 400px) {
     .chatbot-window {
         height: 55vh;
@@ -360,19 +362,9 @@ body {
         font-size: 0.95rem;
     }
 }
-
 @media (min-width: 1024px) {
     .container {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
     }
-}
-.smartfit-card-green {
-    background: linear-gradient(90deg, #e9ffe8, #e1f7e7);
-    border: 2px solid #86efac;
-}
-
-.smartfit-card-yellow {
-    background: linear-gradient(90deg, #fffde7, #fff9c4);
-    border: 2px solid #fef08a;
 }
