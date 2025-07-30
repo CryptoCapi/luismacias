@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luis Macías - Entrenador Personal Smart Fit</title>
+    <title>Luis Macías - Entrenador Personal Smart Fit</title>
     <!-- Tailwind CSS CDN for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- External stylesheet with all custom variables and classes -->
+    <!-- External custom stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-50">
+<body>
     <!-- Header -->
-    <header class="smartfit-dark-gradient text-white py-10 md:py-20 relative overflow-hidden">
+    <header class="smartfit-dark-gradient text-white py-10 md:py-20 relative overflow-hidden w-full">
       <div class="w-24 h-24 md:w-40 md:h-40 bg-white flex items-center justify-center mx-auto mb-4 md:mb-8">
         <span class="text-5xl md:text-8xl">💪</span>
       </div>
@@ -29,45 +29,44 @@
     </header>
 
     <!-- Promociones Especiales -->
-    <section class="py-10 md:py-20 relative overflow-hidden" style="background: linear-gradient(135deg, var(--smartfit-yellow) 0%, var(--smartfit-orange) 100%);">
+    <section class="smartfit-gradient w-full py-10 md:py-20 relative overflow-hidden">
         <div class="absolute inset-0 bg-black opacity-10"></div>
         <div class="container mx-auto px-4 md:px-6 relative z-10">
             <div class="text-center mb-10 md:mb-16 scroll-animate">
                 <div class="inline-block bg-red-600 text-white px-4 py-2 md:px-6 md:py-2 rounded-full font-bold text-xs md:text-sm mb-4 animate-pulse">
-                    🔥 OFERTA POR TIEMPO LIMITADO
+                    🔥 OFERTA POR TIEMPO LIMITADO
                 </div>
                 <h2 class="text-2xl md:text-5xl font-bold mb-4 text-white">¡PROMOCIONES ESPECIALES!</h2>
                 <p class="text-sm md:text-xl text-white opacity-90">Aprovecha estos precios únicos - Solo hasta fin de mes</p>
                 <div class="w-16 h-1 md:w-24 mx-auto bg-white mt-4 md:mt-6"></div>
             </div>
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-
-                <!-- Promoción Básica -->
+                <!-- Promoción Básica -->
                 <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 shadow-2xl card-hover scroll-animate relative">
                     <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <span class="bg-red-600 text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-bold">POPULAR</span>
                     </div>
                     <div class="text-center mb-6 md:mb-8">
-                        <h3 class="text-xl md:text-2xl font-bold mb-2" style="color: var(--smartfit-black)">PRUEBA SEMANAL</h3>
-                        <p class="text-base md:text-lg" style="color: var(--smartfit-blue)">1 Persona • 1 Semana</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-2" style="color: var(--smartfit-black)">PRUEBA SEMANAL</h3>
+                        <p class="text-base md:text-lg" style="color: var(--smartfit-blue)">1 Persona • 1 Semana</p>
                         <div class="mt-4 md:mt-6">
                             <span class="text-base md:text-lg line-through" style="color: var(--smartfit-gray)">$800</span>
                             <span class="text-2xl md:text-4xl font-bold ml-2" style="color: var(--smartfit-blue)">$600</span>
-                            <p class="text-xs md:text-sm font-bold text-green-600 mt-2">¡AHORRA $200!</p>
+                            <p class="text-xs md:text-sm font-bold text-green-600 mt-2">¡AHORRA $200!</p>
                         </div>
                     </div>
                     <ul class="space-y-2 md:space-y-3 mb-6 md:mb-8 text-sm md:text-base">
                         <li class="flex items-center">
                             <span class="text-green-500 mr-2 md:mr-3">✓</span>
-                            <span>5 sesiones de 1 hora</span>
+                            <span>5 sesiones de 1 hora</span>
                         </li>
                         <li class="flex items-center">
                             <span class="text-green-500 mr-2 md:mr-3">✓</span>
-                            <span>Evaluación física gratuita</span>
+                            <span>Evaluación física gratuita</span>
                         </li>
                         <li class="flex items-center">
                             <span class="text-green-500 mr-2 md:mr-3">✓</span>
-                            <span>Plan de ejercicios personalizado</span>
+                            <span>Plan de ejercicios personalizado</span>
                         </li>
                     </ul>
                     <a
@@ -75,86 +74,86 @@
                         target="_blank"
                         class="btn-smartfit w-full py-3 md:py-4 rounded-full font-bold text-base md:text-lg text-white flex items-center justify-center"
                         >
-                        ¡QUIERO ESTA OFERTA!
+                        ¡QUIERO ESTA OFERTA!
                     </a>
                 </div>
-                <!-- Promoción Premium -->
+                <!-- Promoción Premium -->
                 <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 shadow-2xl card-hover scroll-animate relative border-2 md:border-4" style="border-color: var(--smartfit-yellow);">
                     <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <span class="px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-bold text-black" style="background: var(--smartfit-yellow)">MEJOR VALOR</span>
+                        <span class="px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-bold text-black" style="background: var(--smartfit-yellow)">MEJOR VALOR</span>
                     </div>
                     <div class="text-center mb-6 md:mb-8">
-                        <h3 class="text-xl md:text-2xl font-bold mb-2" style="color: var(--smartfit-black)">TRANSFORMACIÓN TOTAL</h3>
-                        <p class="text-base md:text-lg" style="color: var(--smartfit-blue)">1 Persona • 4 Semanas</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-2" style="color: var(--smartfit-black)">TRANSFORMACIÓN TOTAL</h3>
+                        <p class="text-base md:text-lg" style="color: var(--smartfit-blue)">1 Persona • 4 Semanas</p>
                         <div class="mt-4 md:mt-6">
                             <span class="text-base md:text-lg line-through" style="color: var(--smartfit-gray)">$2,800</span>
                             <span class="text-2xl md:text-4xl font-bold ml-2" style="color: var(--smartfit-blue)">$2,000</span>
-                            <p class="text-xs md:text-sm font-bold text-green-600 mt-2">¡AHORRA $800!</p>
+                            <p class="text-xs md:text-sm font-bold text-green-600 mt-2">¡AHORRA $800!</p>
                         </div>
                     </div>
                     <ul class="space-y-2 md:space-y-3 mb-6 md:mb-8 text-sm md:text-base">
                         <li class="flex items-center">
                             <span class="text-green-500 mr-2 md:mr-3">✓</span>
-                            <span>20 sesiones de entrenamiento</span>
+                            <span>20 sesiones de entrenamiento</span>
                         </li>
                         <li class="flex items-center">
                             <span class="text-green-500 mr-2 md:mr-3">✓</span>
-                            <span>Plan nutricional básico GRATIS</span>
+                            <span>Plan nutricional básico GRATIS</span>
                         </li>
                         <li class="flex items-center">
                             <span class="text-green-500 mr-2 md:mr-3">✓</span>
-                            <span>Seguimiento semanal</span>
+                            <span>Seguimiento semanal</span>
                         </li>
                         <li class="flex items-center">
                             <span class="text-green-500 mr-2 md:mr-3">✓</span>
-                            <span>Asesoría WhatsApp incluida</span>
+                            <span>Asesoría WhatsApp incluida</span>
                         </li>
                     </ul>
                     <button class="btn-smartfit w-full py-3 md:py-4 rounded-full font-bold text-base md:text-lg text-white">
-                        ¡APROVECHA AHORA!
+                        ¡APROVECHA AHORA!
                     </button>
                 </div>
-                <!-- Promoción Pareja -->
+                <!-- Promoción Pareja -->
                 <div class="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 shadow-2xl card-hover scroll-animate relative">
                     <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <span class="bg-pink-600 text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-bold">PAREJAS</span>
                     </div>
                     <div class="text-center mb-6 md:mb-8">
-                        <h3 class="text-xl md:text-2xl font-bold mb-2" style="color: var(--smartfit-black)">ENTRENA EN PAREJA</h3>
-                        <p class="text-base md:text-lg" style="color: var(--smartfit-blue)">2 Personas • 4 Semanas</p>
+                        <h3 class="text-xl md:text-2xl font-bold mb-2" style="color: var(--smartfit-black)">ENTRENA EN PAREJA</h3>
+                        <p class="text-base md:text-lg" style="color: var(--smartfit-blue)">2 Personas • 4 Semanas</p>
                         <div class="mt-4 md:mt-6">
                             <span class="text-base md:text-lg line-through" style="color: var(--smartfit-gray)">$4,000</span>
                             <span class="text-2xl md:text-4xl font-bold ml-2" style="color: var(--smartfit-blue)">$3,000</span>
-                            <p class="text-xs md:text-sm font-bold text-green-600 mt-2">¡AHORRA $1,000!</p>
+                            <p class="text-xs md:text-sm font-bold text-green-600 mt-2">¡AHORRA $1,000!</p>
                         </div>
                     </div>
                     <ul class="space-y-2 md:space-y-3 mb-6 md:mb-8 text-sm md:text-base">
                         <li class="flex items-center">
                             <span class="text-green-500 mr-2 md:mr-3">✓</span>
-                            <span>20 sesiones para ambos</span>
+                            <span>20 sesiones para ambos</span>
                         </li>
                         <li class="flex items-center">
                             <span class="text-green-500 mr-2 md:mr-3">✓</span>
-                            <span>Motivación mutua</span>
+                            <span>Motivación mutua</span>
                         </li>
                         <li class="flex items-center">
                             <span class="text-green-500 mr-2 md:mr-3">✓</span>
-                            <span>Rutinas complementarias</span>
+                            <span>Rutinas complementarias</span>
                         </li>
                         <li class="flex items-center">
                             <span class="text-green-500 mr-2 md:mr-3">✓</span>
-                            <span>Precio por persona: $1,500</span>
+                            <span>Precio por persona: $1,500</span>
                         </li>
                     </ul>
                     <button class="btn-smartfit w-full py-3 md:py-4 rounded-full font-bold text-base md:text-lg text-white">
-                        ¡ENTRENA JUNTOS!
+                        ¡ENTRENA JUNTOS!
                     </button>
                 </div>
             </div>
             <!-- Contador de urgencia -->
             <div class="text-center mt-10 md:mt-16 scroll-animate">
                 <div class="bg-red-600 text-white rounded-2xl p-4 md:p-6 max-w-md mx-auto">
-                    <h3 class="text-lg md:text-xl font-bold mb-2">⏰ OFERTA TERMINA EN:</h3>
+                    <h3 class="text-lg md:text-xl font-bold mb-2">⏰ OFERTA TERMINA EN:</h3>
                     <div class="flex justify-center space-x-2 md:space-x-4 text-xl md:text-2xl font-bold">
                         <div class="text-center">
                             <div id="days">15</div>
@@ -169,57 +168,57 @@
                             <div class="text-xs md:text-sm">MIN</div>
                         </div>
                     </div>
-                    <p class="text-xs md:text-sm mt-4 opacity-90">*Solo quedan 8 cupos disponibles este mes</p>
+                    <p class="text-xs md:text-sm mt-4 opacity-90">*Solo quedan 8 cupos disponibles este mes</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Servicios y Precios -->
-    <section class="py-10 md:py-20 bg-white relative">
+    <section class="w-full py-10 md:py-20 bg-white relative">
         <div class="container mx-auto px-4 md:px-6">
             <div class="text-center mb-10 md:mb-16 scroll-animate">
-                <h2 class="text-2xl md:text-4xl font-bold mb-4" style="color: var(--smartfit-black)">Precios Regulares</h2>
-                <p class="text-base md:text-lg" style="color: var(--smartfit-gray)">Después de las promociones, estos son nuestros precios estándar</p>
+                <h2 class="text-2xl md:text-4xl font-bold mb-4" style="color: var(--smartfit-black)">Precios Regulares</h2>
+                <p class="text-base md:text-lg" style="color: var(--smartfit-gray)">Después de las promociones, estos son nuestros precios estándar</p>
                 <div class="w-16 h-1 md:w-24 mx-auto" style="background: var(--smartfit-yellow)"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 max-w-5xl mx-auto">
-                <!-- 1 Persona -->
+                <!-- 1 Persona -->
                 <div class="card-hover bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border-2 border-gray-100 scroll-animate">
                     <div class="text-center mb-6 md:mb-8">
                         <div class="w-16 h-16 md:w-20 md:h-20 rounded-full mx-auto flex items-center justify-center mb-4 md:mb-6 animate-pulse-custom" style="background: var(--smartfit-blue)">
                             <span class="text-2xl md:text-3xl text-white">👤</span>
                         </div>
-                        <h3 class="text-2xl md:text-3xl font-bold mb-2" style="color: var(--smartfit-black)">1 PERSONA</h3>
-                        <p class="font-medium text-base md:text-lg" style="color: var(--smartfit-blue)">ENTRENAMIENTO PERSONALIZADO</p>
+                        <h3 class="text-2xl md:text-3xl font-bold mb-2" style="color: var(--smartfit-black)">1 PERSONA</h3>
+                        <p class="font-medium text-base md:text-lg" style="color: var(--smartfit-blue)">ENTRENAMIENTO PERSONALIZADO</p>
                     </div>
                     <div class="space-y-4 md:space-y-6">
                         <div class="rounded-2xl p-4 md:p-6 flex justify-between items-center transition-colors" style="background: var(--smartfit-gray-light);" onmouseover="this.style.background='#FFF9C4'" onmouseout="this.style.background='var(--smartfit-gray-light)'">
-                            <span class="font-bold text-base md:text-lg" style="color: var(--smartfit-gray)">1 SEMANA</span>
+                            <span class="font-bold text-base md:text-lg" style="color: var(--smartfit-gray)">1 SEMANA</span>
                             <span class="text-2xl md:text-3xl font-bold" style="color: var(--smartfit-blue)">$600</span>
                         </div>
                         <div class="rounded-2xl p-4 md:p-6 flex justify-between items-center transition-colors" style="background: var(--smartfit-gray-light);" onmouseover="this.style.background='#FFF9C4'" onmouseout="this.style.background='var(--smartfit-gray-light)'">
-                            <span class="font-bold text-base md:text-lg" style="color: var(--smartfit-gray)">4 SEMANAS</span>
+                            <span class="font-bold text-base md:text-lg" style="color: var(--smartfit-gray)">4 SEMANAS</span>
                             <span class="text-2xl md:text-3xl font-bold" style="color: var(--smartfit-blue)">$2,000</span>
                         </div>
                     </div>
                 </div>
-                <!-- 2 Personas -->
+                <!-- 2 Personas -->
                 <div class="card-hover bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border-2 border-gray-100 scroll-animate">
                     <div class="text-center mb-6 md:mb-8">
                         <div class="w-16 h-16 md:w-20 md:h-20 rounded-full mx-auto flex items-center justify-center mb-4 md:mb-6 animate-pulse-custom" style="background: var(--smartfit-blue-dark)">
                             <span class="text-2xl md:text-3xl text-white">👥</span>
                         </div>
-                        <h3 class="text-2xl md:text-3xl font-bold mb-2" style="color: var(--smartfit-black)">2 PERSONAS</h3>
-                        <p class="font-medium text-base md:text-lg" style="color: var(--smartfit-blue-dark)">ENTRENAMIENTO EN PAREJA</p>
+                        <h3 class="text-2xl md:text-3xl font-bold mb-2" style="color: var(--smartfit-black)">2 PERSONAS</h3>
+                        <p class="font-medium text-base md:text-lg" style="color: var(--smartfit-blue-dark)">ENTRENAMIENTO EN PAREJA</p>
                     </div>
                     <div class="space-y-4 md:space-y-6">
                         <div class="rounded-2xl p-4 md:p-6 flex justify-between items-center transition-colors" style="background: var(--smartfit-gray-light);" onmouseover="this.style.background='#FFF9C4'" onmouseout="this.style.background='var(--smartfit-gray-light)'">
-                            <span class="font-bold text-base md:text-lg" style="color: var(--smartfit-gray)">1 SEMANA</span>
+                            <span class="font-bold text-base md:text-lg" style="color: var(--smartfit-gray)">1 SEMANA</span>
                             <span class="text-2xl md:text-3xl font-bold" style="color: var(--smartfit-blue-dark)">$900</span>
                         </div>
                         <div class="rounded-2xl p-4 md:p-6 flex justify-between items-center transition-colors" style="background: var(--smartfit-gray-light);" onmouseover="this.style.background='#FFF9C4'" onmouseout="this.style.background='var(--smartfit-gray-light)'">
-                            <span class="font-bold text-base md:text-lg" style="color: var(--smartfit-gray)">4 SEMANAS</span>
+                            <span class="font-bold text-base md:text-lg" style="color: var(--smartfit-gray)">4 SEMANAS</span>
                             <span class="text-2xl md:text-3xl font-bold" style="color: var(--smartfit-blue-dark)">$3,000</span>
                         </div>
                     </div>
@@ -228,11 +227,11 @@
         </div>
     </section>
 
-    <!-- Qué Incluye -->
-    <section class="py-10 md:py-20" style="background: var(--smartfit-light-gray)">
+    <!-- Qué Incluye -->
+    <section class="w-full py-10 md:py-20" style="background: var(--smartfit-light-gray)">
         <div class="container mx-auto px-4 md:px-6">
             <div class="text-center mb-10 md:mb-16 scroll-animate">
-                <h2 class="text-2xl md:text-4xl font-bold mb-4" style="color: var(--smartfit-black)">¿Qué Incluye?</h2>
+                <h2 class="text-2xl md:text-4xl font-bold mb-4" style="color: var(--smartfit-black)">¿Qué Incluye?</h2>
                 <div class="w-16 h-1 md:w-24 mx-auto" style="background: var(--smartfit-yellow)"></div>
             </div>
             <div class="max-w-6xl mx-auto">
@@ -241,40 +240,40 @@
                         <div class="w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6" style="background: var(--smartfit-yellow)">
                             <span class="text-lg md:text-2xl" style="color: var(--smartfit-black)">⏰</span>
                         </div>
-                        <h3 class="text-base md:text-xl font-bold mb-2 md:mb-4" style="color: var(--smartfit-black)">Horario Flexible</h3>
-                        <p class="text-xs md:text-base" style="color: var(--smartfit-gray)">1 hora diaria, 5 días por semana (Lunes a Viernes)</p>
+                        <h3 class="text-base md:text-xl font-bold mb-2 md:mb-4" style="color: var(--smartfit-black)">Horario Flexible</h3>
+                        <p class="text-xs md:text-base" style="color: var(--smartfit-gray)">1 hora diaria, 5 días por semana (Lunes a Viernes)</p>
                     </div>
                     <div class="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-lg card-hover text-center scroll-animate">
                         <div class="w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6" style="background: var(--smartfit-blue)">
                             <span class="text-white text-lg md:text-2xl">🎯</span>
                         </div>
-                        <h3 class="text-base md:text-xl font-bold mb-2 md:mb-4" style="color: var(--smartfit-black)">Programa Personalizado</h3>
-                        <p class="text-xs md:text-base" style="color: var(--smartfit-gray)">Diseñado específicamente para tu objetivo</p>
+                        <h3 class="text-base md:text-xl font-bold mb-2 md:mb-4" style="color: var(--smartfit-black)">Programa Personalizado</h3>
+                        <p class="text-xs md:text-base" style="color: var(--smartfit-gray)">Diseñado específicamente para tu objetivo</p>
                     </div>
                     <div class="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-lg card-hover text-center scroll-animate">
                         <div class="w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6" style="background: var(--smartfit-orange)">
                             <span class="text-white text-lg md:text-2xl">📚</span>
                         </div>
-                        <h3 class="text-base md:text-xl font-bold mb-2 md:mb-4" style="color: var(--smartfit-black)">Explicación Detallada</h3>
-                        <p class="text-xs md:text-base" style="color: var(--smartfit-gray)">Aprende la técnica correcta de cada ejercicio</p>
+                        <h3 class="text-base md:text-xl font-bold mb-2 md:mb-4" style="color: var(--smartfit-black)">Explicación Detallada</h3>
+                        <p class="text-xs md:text-base" style="color: var(--smartfit-gray)">Aprende la técnica correcta de cada ejercicio</p>
                     </div>
                     <div class="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-lg card-hover text-center scroll-animate">
                         <div class="w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6" style="background: var(--smartfit-blue-dark)">
                             <span class="text-white text-lg md:text-2xl">✅</span>
                         </div>
-                        <h3 class="text-base md:text-xl font-bold mb-2 md:mb-4" style="color: var(--smartfit-black)">Corrección de Técnica</h3>
-                        <p class="text-xs md:text-base" style="color: var(--smartfit-gray)">Supervisión constante para mejores resultados</p>
+                        <h3 class="text-base md:text-xl font-bold mb-2 md:mb-4" style="color: var(--smartfit-black)">Corrección de Técnica</h3>
+                        <p class="text-xs md:text-base" style="color: var(--smartfit-gray)">Supervisión constante para mejores resultados</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Otros Servicios -->
-    <section class="py-10 md:py-20 bg-white">
+    <!-- Servicios Adicionales (corregido) -->
+    <section class="w-full py-10 md:py-20 bg-white">
         <div class="container mx-auto px-4 md:px-6">
             <div class="text-center mb-10 md:mb-16 scroll-animate">
-                <h2 class="text-2xl md:text-4xl font-bold mb-4" style="color: var(--smartfit-dark)">Servicios Adicionales</h2>
+                <h2 class="text-2xl md:text-4xl font-bold mb-4" style="color: var(--smartfit-dark)">Servicios Adicionales</h2>
                 <div class="w-16 h-1 md:w-24 mx-auto" style="background: var(--smartfit-red)"></div>
             </div>
             <div class="max-w-4xl mx-auto space-y-6 md:space-y-8">
@@ -284,8 +283,8 @@
                             <span class="text-white text-lg md:text-2xl">🥗</span>
                         </div>
                         <div>
-                            <h3 class="text-lg md:text-2xl font-bold text-green-800 mb-1 md:mb-2">Plan Nutricional</h3>
-                            <p class="text-green-700 text-base md:text-lg">Diseño de plan alimenticio personalizado para maximizar tus resultados</p>
+                            <h3 class="text-lg md:text-2xl font-bold text-green-800 mb-1 md:mb-2">Plan Nutricional</h3>
+                            <p class="text-green-700 text-base md:text-lg">Diseño de plan alimenticio personalizado para maximizar tus resultados</p>
                         </div>
                     </div>
                 </div>
@@ -295,8 +294,8 @@
                             <span class="text-white text-lg md:text-2xl">💊</span>
                         </div>
                         <div>
-                            <h3 class="text-lg md:text-2xl font-bold text-yellow-800 mb-1 md:mb-2">Suplementación Deportiva</h3>
-                            <p class="text-yellow-700 text-base md:text-lg">Asesoría especializada en suplementos para optimizar tu rendimiento</p>
+                            <h3 class="text-lg md:text-2xl font-bold text-yellow-800 mb-1 md:mb-2">Suplementación Deportiva</h3>
+                            <p class="text-yellow-700 text-base md:text-lg">Asesoría especializada en suplementos para optimizar tu rendimiento</p>
                         </div>
                     </div>
                 </div>
@@ -305,92 +304,92 @@
     </section>
 
     <!-- Certificaciones -->
-    <section class="py-10 md:py-20 smartfit-dark-gradient text-white">
+    <section class="w-full py-10 md:py-20 smartfit-dark-gradient text-white">
         <div class="container mx-auto px-4 md:px-6">
             <div class="text-center mb-10 md:mb-16 scroll-animate">
-                <h2 class="text-2xl md:text-4xl font-bold mb-4">Certificaciones y Especialidades</h2>
+                <h2 class="text-2xl md:text-4xl font-bold mb-4">Certificaciones y Especialidades</h2>
                 <div class="w-16 h-1 md:w-24 mx-auto" style="background: var(--smartfit-red)"></div>
             </div>
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <div class="bg-white bg-opacity-10 rounded-2xl p-4 md:p-6 backdrop-blur-sm card-hover scroll-animate">
                     <div class="flex items-center mb-2 md:mb-4">
                         <span class="text-2xl md:text-3xl mr-2 md:mr-4">🏆</span>
-                        <h3 class="font-bold text-base md:text-lg">Entrenamiento Especializado para Mujeres</h3>
+                        <h3 class="font-bold text-base md:text-lg">Entrenamiento Especializado para Mujeres</h3>
                     </div>
                 </div>
                 <div class="bg-white bg-opacity-10 rounded-2xl p-4 md:p-6 backdrop-blur-sm card-hover scroll-animate">
                     <div class="flex items-center mb-2 md:mb-4">
                         <span class="text-2xl md:text-3xl mr-2 md:mr-4">🥗</span>
-                        <h3 class="font-bold text-base md:text-lg">Asesor en Nutrición Deportiva</h3>
+                        <h3 class="font-bold text-base md:text-lg">Asesor en Nutrición Deportiva</h3>
                     </div>
                 </div>
                 <div class="bg-white bg-opacity-10 rounded-2xl p-4 md:p-6 backdrop-blur-sm card-hover scroll-animate">
                     <div class="flex items-center mb-2 md:mb-4">
                         <span class="text-2xl md:text-3xl mr-2 md:mr-4">💪</span>
-                        <h3 class="font-bold text-base md:text-lg">Diploma de Fisicoconstructivismo</h3>
+                        <h3 class="font-bold text-base md:text-lg">Diploma de Fisicoconstructivismo</h3>
                     </div>
                 </div>
                 <div class="bg-white bg-opacity-10 rounded-2xl p-4 md:p-6 backdrop-blur-sm card-hover scroll-animate">
                     <div class="flex items-center mb-2 md:mb-4">
                         <span class="text-2xl md:text-3xl mr-2 md:mr-4">🎯</span>
-                        <h3 class="font-bold text-base md:text-lg">Instructor en Fitness Integral</h3>
+                        <h3 class="font-bold text-base md:text-lg">Instructor en Fitness Integral</h3>
                     </div>
                 </div>
                 <div class="bg-white bg-opacity-10 rounded-2xl p-4 md:p-6 backdrop-blur-sm card-hover scroll-animate md:col-span-2 lg:col-span-2">
                     <div class="flex items-center mb-2 md:mb-4">
                         <span class="text-2xl md:text-3xl mr-2 md:mr-4">💊</span>
-                        <h3 class="font-bold text-base md:text-lg">Certificación en Asesor en Suplementación</h3>
+                        <h3 class="font-bold text-base md:text-lg">Certificación en Asesor en Suplementación</h3>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-   <!-- Contacto -->
-<section class="py-10 md:py-20 smartfit-gradient relative overflow-hidden">
-    <div class="absolute inset-0 bg-black opacity-10"></div>
-    <div class="container mx-auto px-4 md:px-6 text-center relative z-10">
-        <div class="scroll-animate">
-            <h2 class="text-2xl md:text-4xl font-bold mb-8 md:mb-12" style="color: var(--smartfit-black)">
-                ¡Contáctame para Más Información!
-            </h2>
-            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
-                <div class="smartfit-contact-card card-hover">
-                    <span class="text-2xl md:text-4xl block mb-2 md:mb-4">📱</span>
-                    <h3 class="font-bold text-lg md:text-xl mb-1 md:mb-2">Teléfono</h3>
-                    <a href="tel:3329512916" class="text-base md:text-xl hover:underline" style="color: var(--smartfit-black)">332 951 2916</a>
+
+    <!-- Contacto -->
+    <section class="w-full py-10 md:py-20 smartfit-gradient relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="container mx-auto px-4 md:px-6 text-center relative z-10">
+            <div class="scroll-animate">
+                <h2 class="text-2xl md:text-4xl font-bold mb-8 md:mb-12" style="color: var(--smartfit-black)">¡Contáctame para Más Información!</h2>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
+                    <div class="smartfit-contact-card card-hover">
+                        <span class="text-2xl md:text-4xl block mb-2 md:mb-4">📱</span>
+                        <h3 class="font-bold text-lg md:text-xl mb-1 md:mb-2">Teléfono</h3>
+                        <a href="tel:3329512916" class="text-base md:text-xl hover:underline smartfit-contact-link">332 951 2916</a>
+                    </div>
+                    <div class="smartfit-contact-card card-hover">
+                        <span class="text-2xl md:text-4xl block mb-2 md:mb-4">📧</span>
+                        <h3 class="font-bold text-lg md:text-xl mb-1 md:mb-2">Email</h3>
+                        <a href="mailto:ja6774356@gmail.com" class="text-base md:text-xl hover:underline smartfit-contact-link">ja6774356@gmail.com</a>
+                    </div>
+                    <div class="smartfit-contact-card card-hover">
+                        <span class="text-2xl md:text-4xl block mb-2 md:mb-4">📍</span>
+                        <h3 class="font-bold text-lg md:text-xl mb-1 md:mb-2">Ubicación</h3>
+                        <p class="text-base md:text-xl smartfit-contact-link">León Campestre</p>
+                    </div>
                 </div>
-                <div class="smartfit-contact-card card-hover">
-                    <span class="text-2xl md:text-4xl block mb-2 md:mb-4">📧</span>
-                    <h3 class="font-bold text-lg md:text-xl mb-1 md:mb-2">Email</h3>
-                    <a href="mailto:ja6774356@gmail.com" class="text-base md:text-xl hover:underline" style="color: var(--smartfit-black)">ja6774356@gmail.com</a>
+                <div class="flex flex-col items-center gap-4 md:flex-row md:justify-center md:space-x-4">
+                    <!-- Botones de contacto rápido -->
+                    <button onclick="window.open('tel:3329512916')" class="btn-smartfit bg-white text-red-600 px-6 md:px-10 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-gray-100 transition-all">
+                        📞 Llamar Ahora
+                    </button>
+                    <button onclick="window.open('mailto:ja6774356@gmail.com')" class="bg-transparent border-2 border-white text-white px-6 md:px-10 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-white hover:text-red-600 transition-all">
+                        ✉️ Enviar Email
+                    </button>
                 </div>
-                <div class="smartfit-contact-card card-hover">
-                    <span class="text-2xl md:text-4xl block mb-2 md:mb-4">📍</span>
-                    <h3 class="font-bold text-lg md:text-xl mb-1 md:mb-2">Ubicación</h3>
-                    <p class="text-base md:text-xl" style="color: var(--smartfit-black)">León Campestre</p>
-                </div>
-            </div>
-            <div class="flex flex-col items-center gap-4 md:flex-row md:justify-center md:space-x-4">
-                <button onclick="window.open('tel:3329512916')" class="btn-smartfit bg-white text-red-600 px-6 md:px-10 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-gray-100 transition-all">
-                    📞 Llamar Ahora
-                </button>
-                <button onclick="window.open('mailto:ja6774356@gmail.com')" class="bg-transparent border-2 border-white text-white px-6 md:px-10 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-white hover:text-red-600 transition-all">
-                    ✉️ Enviar Email
-                </button>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Footer -->
-    <footer class="smartfit-dark-gradient text-white py-8 md:py-12">
+    <footer class="smartfit-dark-gradient text-white py-8 md:py-12 w-full">
         <div class="container mx-auto px-4 md:px-6 text-center">
             <div class="mb-4 md:mb-6">
-                <p class="text-lg md:text-2xl font-bold mb-1 md:mb-2">LUIS MACÍAS - Entrenador Personal</p>
-                <p class="text-gray-400 text-base md:text-lg">Smart Fit • León Campestre</p>
+                <p class="text-lg md:text-2xl font-bold mb-1 md:mb-2">LUIS MACÍAS - Entrenador Personal</p>
+                <p class="text-gray-400 text-base md:text-lg">Smart Fit • León Campestre</p>
             </div>
             <div class="w-16 h-1 md:w-24 mx-auto mb-4 md:mb-6" style="background: var(--smartfit-red)"></div>
-            <p class="text-gray-400 text-base md:text-lg">Transforma tu cuerpo, transforma tu vida 💪</p>
+            <p class="text-gray-400 text-base md:text-lg">Transforma tu cuerpo, transforma tu vida 💪</p>
         </div>
     </footer>
 
@@ -399,21 +398,21 @@
         <div class="chatbot-window" id="chatbotWindow">
             <div class="chatbot-header">
                 <div class="flex justify-between items-center">
-                    <span>💪 Asistente Smart Fit</span>
+                    <span>💪 Asistente Smart Fit</span>
                     <button onclick="toggleChatbot()" class="text-white hover:text-gray-200">✕</button>
                 </div>
             </div>
             <div class="chatbot-messages" id="chatbotMessages">
                 <div class="message bot">
-                    ¡Hola! Soy el asistente de Luis Macías. ¿En qué puedo ayudarte hoy?
+                    ¡Hola! Soy el asistente de Luis Macías. ¿En qué puedo ayudarte hoy?
                 </div>
             </div>
             <div class="chatbot-options" id="chatbotOptions">
-                <button class="option-btn" onclick="askQuestion('precios')">💰 Ver precios</button>
-                <button class="option-btn" onclick="askQuestion('horarios')">⏰ Horarios disponibles</button>
-                <button class="option-btn" onclick="askQuestion('servicios')">🏋️ Qué incluye</button>
-                <button class="option-btn" onclick="askQuestion('contacto')">📞 Información de contacto</button>
-                <button class="option-btn" onclick="askQuestion('ubicacion')">📍 Ubicación</button>
+                <button class="option-btn" onclick="askQuestion('precios')">💰 Ver precios</button>
+                <button class="option-btn" onclick="askQuestion('horarios')">⏰ Horarios disponibles</button>
+                <button class="option-btn" onclick="askQuestion('servicios')">🏋️ Qué incluye</button>
+                <button class="option-btn" onclick="askQuestion('contacto')">📞 Información de contacto</button>
+                <button class="option-btn" onclick="askQuestion('ubicacion')">📍 Ubicación</button>
             </div>
         </div>
         <div class="chatbot-button animate-bounce-custom" onclick="toggleChatbot()">
