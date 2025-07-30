@@ -72,6 +72,8 @@ body {
 .smartfit-gradient {
     /* De amarillo a naranja; se utiliza en la sección de promociones y contacto */
     background: linear-gradient(135deg, var(--smartfit-yellow) 0%, var(--smartfit-orange) 100%);
+    border-radius: 0 0 24px 24px;
+    padding-bottom: 1.2em;
 }
 
 .smartfit-dark-gradient {
@@ -117,10 +119,17 @@ body {
     max-width: var(--card-max-width);
     margin: 0 auto var(--container-padding) auto;
     padding: 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
 }
 .card-hover:hover, .card-hover:focus-visible {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 25px 50px rgba(6, 114, 243, 0.20);
+}
+.card-hover:last-child {
+    margin-bottom: 2.5rem !important;
 }
 
 /* Botón SmartFit */
@@ -138,6 +147,11 @@ body {
     overflow: hidden;
     outline: none;
     box-shadow: 0 2px 6px rgba(255,215,0,0.1);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    max-width: 370px;
 }
 .btn-smartfit:hover, .btn-smartfit:focus-visible {
     transform: translateY(-2px) scale(1.04);
@@ -296,10 +310,28 @@ body {
 
 /* Responsive Tweaks */
 @media (max-width: 600px) {
+    body {
+        padding: 0 0.5rem;
+    }
+    .container, .card-hover {
+        padding-left: 0.8rem !important;
+        padding-right: 0.8rem !important;
+    }
     .card-hover {
         padding: 1rem;
         font-size: 0.98rem;
         max-width: 98vw;
+        border-radius: 16px;
+        box-shadow: 0 1px 6px rgba(6, 114, 243, 0.12);
+    }
+    .btn-smartfit {
+        font-size: 0.95rem;
+        padding: 0.6em 1.5em;
+        margin-bottom: 0.8em;
+    }
+    .smartfit-gradient {
+        border-radius: 0 0 24px 24px;
+        padding-bottom: 1.2em;
     }
     .chatbot-header {
         font-size: 1rem;
