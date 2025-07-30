@@ -367,3 +367,12 @@ body {
         padding-right: 2.5rem;
     }
 }
+.smartfit-card-green {
+    background: linear-gradient(90deg, #e9ffe8, #e1f7e7);
+    border: 2px solid #86efac;
+}
+
+.smartfit-card-yellow {
+    background: linear-gradient(90deg, #fffde7, #fff9c4);
+    border: 2px solid #fef08a;
+}
